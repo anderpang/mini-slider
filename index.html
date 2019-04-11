@@ -14,7 +14,7 @@
           .slider-item.green{background:green;}
           .slider-item.blue{background:blue;}
 
-          pre{max-width:300px;margin:1em auto;}
+          pre{max-width:300px;margin:1em auto;word-break: break-all;}
 
     </style>
     <script src="./js/mini-slider.min.js"></script>
@@ -28,24 +28,24 @@
         </ul>
     </div>
     <pre>
-            new MiniSlider({
-                el:document.querySelector("#slider1"),
-                loop:true,
-                autoplay:true
-                //,index:1
-                //,delay:3000
-                //,transitionClass:"anim"
-            }).onChange(function(realIndex){
-                console.log(realIndex);
-            });  
+new MiniSlider({
+    el:document.querySelector("#slider1"),
+    loop:true,
+    autoplay:true
+    ,delay:3000
+    //,index:1    
+    //,transitionClass:"anim"
+}).onChange(function(realIndex){
+    console.log(realIndex);
+});  
     </pre>
     <script>
         new MiniSlider({
             el:document.querySelector("#slider1"),
             loop:true,
             autoplay:true
-            //,index:1
-            //,delay:3000
+            ,delay:3000
+            //,index:1            
             //,transitionClass:"anim"
         }).onChange(function(realIndex){
             console.log(realIndex);
@@ -60,16 +60,14 @@
         </ul>
     </div>
     <pre>
-            new MiniSlider({
-                el:document.querySelector("#slider2"),
-                loop:false
-            });
+new MiniSlider({
+    el:document.querySelector("#slider2")
+});
     </pre>
     
     <script>
          new MiniSlider({
-             el:document.querySelector("#slider2"),
-             loop:false
+             el:document.querySelector("#slider2")
          });
     </script>
 </body>
