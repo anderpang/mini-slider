@@ -28,8 +28,7 @@
     function MiniSlider(opts){
         var items,num;
         this.options=opts;
-        this.options.loop=opts.loop!==false;
-        this.options.autoplay=opts.autoplay && this.options.loop;
+        this.options.autoplay=opts.autoplay && opts.loop;
         this.frames=(opts.delay||5000)*60/1000|0;
         this._framesCount=0;
         this.transitionClass=opts.transitionClass||"anim";
@@ -60,7 +59,7 @@
             while(num--){
                 items[num].style.left=(num*100)+"%";
             }
-            console.log(this.options.index)
+  
             if(this.options.index){
                 this.index=this.options.index;
                 this.translate(-100*this.index);
