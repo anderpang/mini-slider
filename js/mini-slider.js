@@ -195,7 +195,7 @@
             this.translate(-index*100);
             isChange&&this.emit();
         }
-        if(this.options.autoplay && e.type==="mouseleave"){
+        if(this.options.autoplay && (this._isTouch || e.type==="mouseleave")){
             this.play();
         }
         },
