@@ -36,8 +36,8 @@
         this._listeners=[];
         items=this.inner.children;
         num=items.length;
-        if(num>1){
-            this.len=num;
+        this.len=num;
+        if(num>1){            
             this.index=0;
             this.init(items,num);
         }
@@ -65,7 +65,7 @@
                 this.translate(-100*this.index);
             }
             this.move=this.move.bind(this);
-            this.initEvent(this.options.el).emit();
+            this.initEvent(this.options.el);
             if(this.options.autoplay){
                 this.play();
             }
@@ -200,7 +200,11 @@
         }
         },
         onChange:function(f){
+            var len=this.len;
             this._listeners.push(f);
+            if(len>1){
+                f.call(this,(this.index+len)%len);
+            }
             return this;
         },
         emit:function(){
