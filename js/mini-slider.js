@@ -10,7 +10,7 @@
         return setTimeout(t,16.6667);
     },
     caf=window.cancelAnimationFrame||window.webkitCancelAnimationFrame||function(t){
-        clearTimeout(t)
+        clearTimeout(t);
     };
 
     /**
