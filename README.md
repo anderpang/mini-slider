@@ -1,6 +1,8 @@
 # mini-slider
 精简轮播插件
 
+主流移动端、pc端
+
 ```javascript
 new MiniSlider({
       el:document.querySelector("#slider1"),
