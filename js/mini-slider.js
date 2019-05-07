@@ -121,7 +121,7 @@
             this._timer=raf(this.move);
             if(this._isMove)
             {
-                var percent=((this._mouseX-this._ox)/this._ow-this.index)*100;
+                var percent=((this._mouseX-this._ox)*0.6/this._ow-this.index)*100;
                 this.translate(percent);
             }
             else if(this.options.autoplay){
