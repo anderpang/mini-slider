@@ -1,0 +1,5 @@
+/*! <anderpang@foxmail.com> */
+.mini-slider{position:relative;overflow:hidden;user-select: none;}
+.slider-list{position:absolute;width:100%;height:100%;margin:0;padding:0;list-style-type: none;}
+.slider-list.is-anim{-moz-transition:.5s;-webkit-transition:.5s;transition:.5s;}
+.slider-item{position:absolute;width:100%;height:100%;}
